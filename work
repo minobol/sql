@@ -1,0 +1,29 @@
+CREATE TABLE Кабинет (
+    id INTEGER PRIMARY KEY,
+    название VARCHAR(50),
+    количество_парт INTEGER,
+    описание TEXT
+);
+
+CREATE TABLE Ученик (
+    id INTEGER PRIMARY KEY,
+    имя VARCHAR(50),
+    фамилия VARCHAR(50),
+    класс INTEGER
+);
+
+CREATE TABLE Парта (
+    id INTEGER PRIMARY KEY,
+    номер INTEGER,
+    место_ученика VARCHAR(50),
+    занятость BOOLEAN
+);
+
+CREATE TABLE Студенты_и_Парты (
+    id INTEGER PRIMARY KEY,
+    id_ученика INTEGER,
+    id_парты INTEGER,
+    занятость BOOLEAN,
+    start_time TIMESTAMP,
+    end_time TIMESTAMP
+);
